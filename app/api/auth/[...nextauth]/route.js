@@ -1,12 +1,12 @@
 import NextAuth from "next-auth";
-import Credentials from "next-auth/providers/credentials";
+import CredentialsProvider from "next-auth/providers/credentials";
 import { connectDB } from "@/lib/mongodb";
 import User from "@/models/user";
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 
 export const authOptions = {
     providers: [
-        Credentials({
+        CredentialsProvider({
             async authorize(credentials) {
                 try {
                     await connectDB();
