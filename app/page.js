@@ -18,12 +18,11 @@ export default function Home() {
   }, [session, status, router])
 
   return (
-    <div>
-      <nav>
-        <Navbar />
-      </nav>
+    <div className="bg-black h-screen">
+      <Navbar />
+
       <main>
-        <h1>Home</h1>
+        <h1></h1>
       </main>
     </div>
   );
